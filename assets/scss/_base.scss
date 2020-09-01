@@ -187,6 +187,8 @@ figure {
   width: 100%;
   padding-left: 2.0rem;
   padding-right: 2.0rem;
+  position: relative;
+
   h1 {
     text-align: center;
   }
@@ -214,4 +216,8 @@ figure {
 
 .fas {
   font-weight: 900;
+}
+
+.strike-through {
+  text-decoration: line-through;
 }

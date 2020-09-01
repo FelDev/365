@@ -1,5 +1,4 @@
 .navigation {
-  height: 6.0rem;
   width: 100%;
   a, span {
     display: inline;
@@ -17,7 +16,6 @@
   }
   .navigation-title {
     letter-spacing: 0.1rem;
-    text-transform: uppercase;
   }
   .navigation-list {
     float: right;
@@ -26,47 +24,34 @@
     margin-top: 0;
     display: flex;
     align-items: center;
-    @media only screen and (max-width : 446px) {
-      position: absolute;
-      top: 6.0rem;
-      right: 0;
-      z-index: 5;
-      visibility: hidden;
-      opacity: 0;
-      padding: 0 0 0.75em 0;
-      max-height: 0;
-      width: 100%;
-      background-color: $bg-color;
-      border-top: solid 2px $alt-bg-color;
-      border-bottom: solid 2px $alt-bg-color;
-      transition: opacity 0.25s, max-height 0.15s linear;
-      flex-direction: column;
-    }
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
     .navigation-item {
       float: left;
       margin: 0;
       position: relative;
       min-height: 50px;
       display: flex;
+      align-items: center;
+
+      &:last-of-type {
+        position: absolute;
+        top: 1rem;
+        right: 1px;
+      }
       @media only screen and (max-width : 446px) {
-        float: none !important;
-        text-align: center;
-        a, span {
+        a {
+          line-height: 2em;
+        } 
+        
+        span {
           line-height: 5.0rem;
         }
       }
       a, span, div {
         margin-left: 1.0rem;
         margin-right: 1.0rem;
-      }
-    }
-    .menu-separator {
-      @media only screen and (max-width : 446px) {
-        border-top: 2px solid $fg-color;
-        margin: 0 8.0rem;
-        span {
-          display: none;
-        }
       }
     }
   }
