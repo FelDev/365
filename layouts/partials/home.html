@@ -4,37 +4,196 @@
       <div>
         <h1><span class="strike-through">365</span> 233 days of Photography</h1>
         <p>
-          On day 15 of my gap year in 2012-2013, I challenged myself to take at least one picture every single day. It's been a lot of fun and I got some of my best shots because of it. 
+          On day 15 of my gap year in 2012-2013, I challenged myself to take at least one picture every single day. It's
+          been a lot of fun and I got some of my best shots because of it.
         </p>
         <p>
-          Eventually, I took a job on a boat and the challenge wasn't really feasible anymore, I felt like I had pushed myself far enough anyways and so, from day 233 onward it's not a-picture-a-day but a-picture-when-I-feel-like-it. Fun anyways!
+          Eventually, I took a job on a boat and the challenge wasn't really feasible anymore, I felt like I had pushed
+          myself far enough anyways and so, from day 233 onward it's not a-picture-a-day but
+          a-picture-when-I-feel-like-it. Fun anyways!
         </p>
       </div>
-    </section>    
+    </section>
   </div>
-  <div id="pictures">
 
-    {{ $albumUrl := print "/static/images/" }}
-    {{ range readDir $albumUrl }}
-    {{ if in .Name ".webp" }}
-    {{ $imgURL := print "images/" "/" .Name | absURL }}
-    <figure id="{{.Name}}">
-      <picture>
-        <source 
-        srcset='{{$imgURL}}'
-        type="image/webp"
-        >
-        <img 
-        src='/no_webp_support.png' 
-        alt="Looks like your browser doesn't support .webp :\" 
-        loading="lazy"
-        >
-      </picture>  
-      <figcaption>
-        <p>{{substr .Name 0 -5}}</p>
-      </figcaption>
-    </figure>
-    {{ end }}
-    {{ end }}
+  
+  
+  <!-- <div id="allPictures">
+    <h2>All shots</h2>
+    <button onclick="toggleFullscreen('allSwiper')">
+      ⬅️Enlarge➡️
+    </button>
+    <div id="allSwiper" class="swiper-container">
+      <div class="swiper-wrapper">
+        {{ $albumUrl := print "/static/images/" }}
+        {{ range readDir $albumUrl }}
+          {{ if in .Name ".webp" }}
+            {{ $imgURL := print "images/" "/" .Name | absURL }}
+              <div class="swiper-slide">
+                <img src="{{$imgURL}}" alt="">
+              </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div> -->
+
+
+  
+</section>
+
+<section id="bestPictures">
+    <h2>Best Shots</h2>
+    <!-- <button onclick="toggleFullscreen('bestSwiper')"> -->
+      <!-- ⬅️Enlarge➡️ -->
+    <!-- </button> -->
+  <div id="bestSwiper" class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/Jour_016B.webp" alt="Patient surfer sitting on rocks. Looking at the raging waves.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_020.webp" alt="Young man hitchhiking with a sign that reads 'I have cookies'.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_034.webp" alt="Road with a blurry, dizzying effect.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_039.webp" alt="Silhouette of a fisherman on shore at sunrise.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_051A.webp" alt="Profile of a sea bird's head with a hole in its beak.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_058A.webp" alt="The longest straight road in the world.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_060D.webp" alt="Dirt road with a single parked jeep on it. It divides two bodies of water, the one on the left is pink a woman is walking in it.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_061E.webp" alt="Big pelican, resting standing in shallow water.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_078.webp" alt="Silhouette of a bee on a flower.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_080B.webp" alt="Face of a dead parrot, with blood leaking in the background.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_103.webp" alt="Woman with her face hidden by her dark hair, hovering a magical hand over Tarot cards.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_112.webp" alt="Crab, sitting in a man's hand. Just over 2 fingers wide.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_143.webp" alt="A sea of sailboat masts at harbor.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_143B.webp" alt="A man walking amongst boats in the harbor. A bar is in the background.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_164.webp" alt="Profile of a white parrot with a yellow head feather.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_175.webp" alt="Dry young man inches above water. Miliseconds before he gets wet.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_176B.webp" alt="Small spider stealing a much bigger spider's meal right underneath it.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_177B.webp" alt="Long exposure picture of stars. The trajectories of each star is visible, creating many circular lines.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_189B.webp" alt="Tiny gecko lizard on a fingernail.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_190.webp" alt="Sail boats anchored in bay at sunrise.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_191B.webp" alt="Bat fish about to eat a breadcrumb.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_211.webp" alt="Portrait of a young Japanese man in low lighting. Eyes completely black.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_345A.webp" alt="Man doing an aggressive boardslide in a skateboarding pool.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_345B.webp" alt="Young man doing a big aerial trick above a skateboarding pool.">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Jour_volfuckingcan.webp" alt="Man looking down a volano, above the clouds.">
+      </div>
+      <!-- <div class="swiper-slide">
+        <img src="images/Jour_.webp" alt="">
+      </div> -->
+    </div>
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </section>
+
+<section id="allPictures">
+  <h2>All Shots</h2>
+  {{ $albumUrl := print "/static/images/" }}
+  {{ range readDir $albumUrl }}
+    {{ if in .Name ".webp" }}
+      {{ $imgURL := print "images/" "/" .Name | absURL }}
+      <figure id="{{.Name}}"
+      >
+      <picture>
+        <source
+          srcset='{{$imgURL}}'
+          type="image/webp"
+        >
+        <img
+          src='/no_webp_support.png' 
+          alt="Looks like your browser doesn't support .webp :\" 
+          loading="lazy"
+          onclick="this.classList.toggle('larrrge')"
+
+          >
+        </picture>  
+        <figcaption>
+          <p>{{substr .Name 0 -5}}</p>
+        </figcaption>
+      </figure>
+    {{ end }}
+  {{ end }}
+</section>
+
+<script>
+  let swiperOptions = {
+    // Optional parameters
+    loop: false,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    centeredSlides: true,
+    autoHeight: true,
+  };
+
+  let bestSwiper = new Swiper('.swiper-container', swiperOptions)
+  // let allSwiper = new Swiper('#allSwiper', swiperOptions)
+
+  function toggleFullscreen(swipper) {
+    if (swipper == "bestSwiper") {
+      // document.querySelector('#bestSwiper').classList.toggle('fullscreen');
+      document.querySelector('#bestPictures').classList.toggle('fullscreen');
+      bestSwiper.update();
+    } else {
+      document.querySelector('#allSwiper').classList.toggle('fullscreen');
+      allSwiper.update();
+    }
+  }
+</script>

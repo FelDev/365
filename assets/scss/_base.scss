@@ -57,8 +57,9 @@ h1 {
   }
 }
 h2 {
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   line-height: 3.2rem;
+  text-align: center;
   @media only screen and (max-width : 768px) {
     font-size: 2.6rem;
     line-height: 3.0rem;
@@ -103,28 +104,6 @@ b, strong {
   font-size: 1.8rem;
 }
 
-.highlight > div,
-.highlight > pre {
-  margin: 0 0 2rem;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-pre {
-  display: block;
-  font-family: $code-font-family;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.6rem;
-  overflow-x: auto;
-  margin: 0;
-  code {
-    display: inline-block;
-    background-color: inherit;
-    color: inherit;
-  }
-}
-
 th, td {
   padding: 1.6rem;
 }
@@ -151,6 +130,7 @@ table tr th:last-child {
 
 img {
   max-width: 100%;
+  max-height: 100vh;
 }
 
 figure {
@@ -170,7 +150,11 @@ figure {
   width: 100%;
   padding-left: 2.0rem;
   padding-right: 2.0rem;
-  position: relative;
+  
+  &#nav-section {
+    position: relative;
+
+  }
 
   h1 {
     text-align: center;
