@@ -86,12 +86,14 @@ footer {
 // Theme toggle
 #theme-toggle {
     position: absolute;
-    top: 1rem;
-    right: 1px;
+    top: 1.5rem;
+    right: 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    
+    @media only screen and (max-width : 300px) {
+        right: 1px;
+    }
     label {
         position: relative;
         display: block;

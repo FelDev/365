@@ -3,14 +3,18 @@
   NODE_VERSION = "12"
 
 [[redirects]]
-  from = "/wp-admin"
-  to = "/admin"
+  from = "/admin"
+  to = "https://www.felixparadis.com/admin"
   status = 301
   force = false
-
+[[redirects]]
+  from = "/wp-admin"
+  to = "https://www.felixparadis.com/admin"
+  status = 301
+  force = false
 [[redirects]]
   from = "/*.php"
-  to = "/admin"
+  to = "https://www.felixparadis.com/admin"
   status = 301
   force = false
 [[redirects]]
