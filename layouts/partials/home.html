@@ -1,4 +1,4 @@
-<section class="container centered">
+<section class="container">
   <div class="about">
     <section class="rainbow-section">
       <div>
@@ -138,6 +138,12 @@
 
 <section id="allPictures">
   <h2>All Shots</h2>
+  <ul class="navigation-list container">
+    <li class="navigation-item"><a href="#Jour_100.webp">Go to day 100</a></li>
+    <li class="navigation-item"><a href="#Jour_200.webp">Go to day 200</a></li>
+    <li class="navigation-item"><a href="#Jour_299.webp">Go to day 299</a></li>
+  </ul>
+      
   {{ $albumUrl := print "/static/images/" }}
   {{ range readDir $albumUrl }}
     {{ if in .Name ".webp" }}
@@ -168,7 +174,7 @@
 <script>
   let swiperOptions = {
     // Optional parameters
-    loop: false,
+    loop: true,
 
     // Navigation arrows
     navigation: {
