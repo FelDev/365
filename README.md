@@ -2,7 +2,7 @@
 
 A 365 is: at least one picture per day, for 365 days.
 
-https://365.felixparadis.com
+[365.felixparadis.com](https://365.felixparadis.com)
 
 Built with [Hugo](https://gohugo.io/).
 
