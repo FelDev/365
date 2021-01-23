@@ -15,13 +15,6 @@ pygmentscodefencesguesssyntax = true
 
 enableRobotsTXT = true
 
-googleAnalytics = "UA-109396923-1"
-[privacy.googleAnalytics]
-    anonymizeIP = true
-    disable = false
-    respectDoNotTrack = true
-    useSessionStorage = true
-
 [params]
     author = "Félix Paradis"
     description = "Felix Paradis's photographic work."
